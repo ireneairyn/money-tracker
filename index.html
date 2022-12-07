@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐷💰️Piggy Bank💰️🐷</title>
+  </head>
+  <body>
+    <header>
+      <h1>Money tracker!</h1>
+    </header>
+    <div>
+      <h2>🐖Your savings🪙</h2>
+      <p>0€</p>
+    </div>
+    <div>
+      <h3>Income ➕</h3>
+      <h3>Expenses ➖</h3>
+    </div>
+    <div>
+      <h4>Lastest transactions</h4>
+      <div id="transactions">
+      </div>
+    </div>
+    <div>
+      <h4>New transaction</h4>
+      <form id="form">
+        <div>
+          <label for="description">Description</label>
+          <input
+            id="description"
+            required
+            type="text"
+            placeholder="Add a description..."
+          />
+        </div>
+        <div>
+          <label for="amount">Income or expenses</label>
+          <input
+            id="amount"
+            required
+            type="number"
+            placeholder="Add an expense (-number) or an income (number)..."
+          />
+        </div>
+        <div>
+          <button type="submit">Add transaction</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+</html>
