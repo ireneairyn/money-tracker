@@ -1,0 +1,111 @@
+body {
+    background-color: rgb(255, 254, 239);
+    margin:10px;
+    border: 2px solid rgb(244, 233, 189);
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+body, button, input {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+body > div, header {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: -10px;
+}
+
+.incomeHeader, #income {
+    color: rgb(5, 171, 30);
+}
+
+.expensesHeader, #expenses {
+    color: rgb(198, 21, 21);
+}
+
+#transactions,
+.transaction {
+    width: 100%;
+    margin: 5px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.positive {
+    color: rgb(5, 171, 30);
+}
+.negative {
+    color: rgb(198, 21, 21);
+}
+
+.incomeAndExpenses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.incomeBlock, .expensesBlock {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+hr.rounded {
+    border: 1px solid rgb(244, 233, 189);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#income, #expenses, #balance {
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid rgb(244, 233, 189);
+    border-radius: 5px;
+    background-color: white;
+}
+
+h4 {
+    margin: 15px;
+}
+
+.descriptionBlock, .amountBlock, .button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(244, 233, 189);
+    margin-top: 5px;
+}
+
+input {
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(244, 233, 189);
+}
+
+form, input {
+    width: 100%;
+}

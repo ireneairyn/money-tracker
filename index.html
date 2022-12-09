@@ -4,29 +4,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🐷💰️Piggy Bank💰️🐷</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <h1>Money tracker!</h1>
+      <h1>Money tracker</h1>
     </header>
     <div>
-      <h2>🐖Your savings🪙</h2>
+      <h2>🪙 Your savings 🐖</h2>
       <div id="balance"></div>
     </div>
-    <div>
-      <h3>Income ➕</h3>
-      <div id="income"></div>
-      <h3>Expenses ➖</h3>
-      <div id="expenses"></div>
+    <hr class="rounded">
+    <div class="incomeAndExpenses">
+      <div class="incomeBlock">
+        <h3 class="incomeHeader">Income ➕</h3>
+        <div id="income"></div>
+      </div>
+      <div class="expensesBlock">
+        <h3 class="expensesHeader">Expenses ➖</h3>
+        <div id="expenses"></div>
+      </div>
     </div>
+    <hr class="rounded">
     <div>
       <h4>Lastest transactions</h4>
       <div id="transactions"></div>
     </div>
+    <hr class="rounded">
     <div>
       <h4>New transaction</h4>
       <form id="form">
-        <div>
+        <div class="descriptionBlock">
           <label for="description">Description</label>
           <input
             id="description"
@@ -35,17 +55,17 @@
             placeholder="Add a description..."
           />
         </div>
-        <div>
-          <label for="amount">Income or expenses</label>
+        <div class="amountBlock">
+          <label for="amount">Amount</label>
           <input
             id="amount"
             required
             type="number"
             step="any"
-            placeholder="Add an expense (-number) or an income (number)..."
+            placeholder="Add an amount..."
           />
         </div>
-        <div>
+        <div class="button">
           <button type="submit">Add transaction</button>
         </div>
       </form>

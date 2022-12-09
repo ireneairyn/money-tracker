@@ -16,10 +16,12 @@ function submitAddTransaction(event) {
   const description = elDescription.value;
   console.log({ amount, description });
 
-  elTransactions.innerHTML += `<div>${description} ${amount}</div>`;
+  elTransactions.innerHTML += `<div class="transaction"><span>${description}</span><span class="${
+    amount < 0 ? "negative" : "positive"
+  }">${amount}</span></div>`;
   elAmount.value = "";
   elDescription.value = "";
-  elDescription.focus()
+  elDescription.focus();
 
   if (amount >= 0) {
     totalIncome += amount;
