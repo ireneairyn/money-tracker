@@ -1,9 +1,6 @@
 body {
-    background-color: rgb(255, 254, 239);
-    margin:10px;
-    border: 2px solid rgb(244, 233, 189);
-    border-radius: 20px;
-    padding: 20px;
+    background-color: rgb(244, 233, 189);
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -13,7 +10,7 @@ body, button, input {
     font-size: 16px;
 }
 
-body > div, header {
+.wrapper > div, header {
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -23,6 +20,12 @@ body > div, header {
 
 header {
     margin-bottom: -10px;
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+    letter-spacing: -2px;
+    font-weight: bold;
 }
 
 .incomeHeader, #income {
@@ -42,6 +45,12 @@ header {
 .transaction {
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px dashed rgb(244, 233, 189);
+    padding: 10px 0px;
+}
+
+.transaction:last-child {
+    border-bottom: none;
 }
 
 .positive {
@@ -51,7 +60,7 @@ header {
     color: rgb(198, 21, 21);
 }
 
-.incomeAndExpenses {
+.wrapper .incomeAndExpenses {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -99,6 +108,10 @@ button {
     margin-top: 5px;
 }
 
+button:hover {
+    background-color: rgb(241, 206, 66);
+}
+
 input {
     margin: 10px 0px;
     padding: 5px;
@@ -108,4 +121,23 @@ input {
 
 form, input {
     width: 100%;
+}
+
+.wrapper {
+    background-color: rgb(255, 254, 239);
+    width: 100%;
+    margin:10px;
+    border: 2px solid rgb(244, 233, 189);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.emoji {
+    font-size: 20px;
+}
+
+@media (min-width: 400px) {
+.wrapper {
+    max-width: 600px;
+}
 }
