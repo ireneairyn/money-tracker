@@ -1,143 +1,261 @@
 body {
-    background-color: rgb(244, 233, 189);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgb(244, 233, 189);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body, button, input {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 16px;
+body,
+button,
+input {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
 }
 
-.wrapper > div, header {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.wrapper > div,
+header {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-    margin-bottom: -10px;
+  margin-bottom: -10px;
 }
 
 h1 {
-    font-family: 'Arvo', serif;
-    letter-spacing: -2px;
-    font-weight: bold;
+  font-family: "Arvo", serif;
+  letter-spacing: -2px;
+  font-weight: bold;
 }
 
-.incomeHeader, #income {
-    color: rgb(5, 171, 30);
+.incomeHeader,
+#income {
+  color: rgb(5, 171, 30);
 }
 
-.expensesHeader, #expenses {
-    color: rgb(198, 21, 21);
+.expensesHeader,
+#expenses {
+  color: rgb(198, 21, 21);
 }
 
 #transactions,
 .transaction {
-    width: 100%;
-    margin: 5px;
+  width: 100%;
+  margin: 5px;
 }
 
 .transaction {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px dashed rgb(244, 233, 189);
-    padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed rgb(244, 233, 189);
+  padding: 10px 0px;
 }
 
 .transaction:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .positive {
-    color: rgb(5, 171, 30);
+  color: rgb(5, 171, 30);
 }
 .negative {
-    color: rgb(198, 21, 21);
+  color: rgb(198, 21, 21);
 }
 
 .wrapper .incomeAndExpenses {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.incomeBlock, .expensesBlock {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+.incomeBlock,
+.expensesBlock {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 hr.rounded {
-    border: 1px solid rgb(244, 233, 189);
-    border-radius: 5px;
-    margin-top: 20px;
+  border: 1px solid rgb(244, 233, 189);
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-#income, #expenses, #balance {
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: 1px solid rgb(244, 233, 189);
-    border-radius: 5px;
-    background-color: white;
+#income,
+#expenses,
+#balance {
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid rgb(244, 233, 189);
+  border-radius: 5px;
+  background-color: white;
 }
 
 h4 {
-    margin: 15px;
+  margin: 15px;
 }
 
-.descriptionBlock, .amountBlock, .button {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0px;
+.descriptionBlock,
+.amountBlock,
+.button {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
 }
 
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(244, 233, 189);
-    margin-top: 5px;
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(244, 233, 189);
+  margin-top: 5px;
 }
 
-button:hover {
-    background-color: rgb(241, 206, 66);
+.submitButton:hover {
+  background-color: rgb(241, 206, 66);
 }
 
 input {
-    margin: 10px 0px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid rgb(244, 233, 189);
+  margin: 10px 0px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(244, 233, 189);
 }
 
-form, input {
-    width: 100%;
+form,
+input {
+  width: 100%;
 }
 
 .wrapper {
-    background-color: rgb(255, 254, 239);
-    width: 100%;
-    margin:10px;
-    border: 2px solid rgb(244, 233, 189);
-    border-radius: 20px;
-    padding: 20px;
+  background-color: rgb(255, 254, 239);
+  width: 100%;
+  margin: 10px;
+  border: 2px solid rgb(244, 233, 189);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .emoji {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 @media (min-width: 400px) {
-.wrapper {
+  .wrapper {
     max-width: 600px;
+  }
 }
+
+/* Night Mode */
+.darkModeText {
+  display: none;
+}
+
+body.darkMode .lightModeText {
+  display: none;
+}
+
+body.darkMode .darkModeText {
+  display: initial;
+}
+
+body.darkMode {
+  background-color: rgb(19, 24, 42);
+  color: whitesmoke;
+}
+
+body.darkMode .wrapper {
+  background-color: rgb(19, 24, 42);
+  border: 2px solid rgb(89, 99, 135);
+}
+
+button.darkLightButton {
+  padding: 10px;
+  border: solid 2px rgb(89, 99, 135);
+  border-radius: 5px;
+  background-color: rgb(89, 99, 135);
+}
+
+button.darkLightButton:hover {
+  background-color: rgb(19, 24, 42);
+}
+
+body.darkMode hr.rounded {
+  border: 1px solid rgb(89, 99, 135);
+}
+
+body.darkMode .transaction {
+  border-bottom: 1px dashed rgb(89, 99, 135);
+}
+
+body.darkMode .transaction:last-child {
+  border-bottom: none;
+}
+
+body.darkMode input::placeholder {
+  color: rgb(143, 146, 170);
+}
+body.darkMode input {
+  color: whitesmoke;
+}
+
+body.darkMode #amount {
+  background-color: rgb(89, 99, 135);
+  border: solid 1px rgb(89, 99, 135);
+}
+
+body.darkMode #description {
+  background-color: rgb(89, 99, 135);
+  border: solid 1px rgb(89, 99, 135);
+}
+
+body.darkMode #balance {
+  background-color: rgb(19, 24, 42);
+  border: solid 1px rgb(89, 99, 135);
+}
+
+body.darkMode #income {
+  background-color: rgb(19, 24, 42);
+  border: solid 1px rgb(89, 99, 135);
+  color: rgb(22, 215, 51);
+}
+
+body.darkMode .incomeHeader {
+  color: rgb(22, 215, 51);
+}
+
+body.darkMode #expenses {
+  background-color: rgb(19, 24, 42);
+  border: solid 1px rgb(89, 99, 135);
+  color: rgb(234, 59, 59);
+}
+
+body.darkMode .expensesHeader {
+  color: rgb(234, 59, 59);
+}
+
+body.darkMode .positive {
+  color: rgb(22, 215, 51);
+}
+
+body.darkMode .negative {
+  color: rgb(234, 59, 59);
+}
+
+body.darkMode .submitButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(244, 233, 189);
+  margin-top: 5px;
+}
+
+body.darkMode .submitButton:hover {
+  background-color: rgb(241, 206, 66);
 }

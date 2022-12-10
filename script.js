@@ -7,6 +7,12 @@ let elBalance = document.getElementById("balance");
 let elTotalIncome = document.getElementById("income");
 let elTotalExpenses = document.getElementById("expenses");
 
+const darkLightMode = document.getElementById("darkLightMode");
+darkLightMode.addEventListener("click", function () {
+  const body = document.getElementById("body");
+  body.classList.toggle("darkMode");
+});
+
 // define state
 let totalIncome = 0;
 let totalExpenses = 0;
@@ -20,6 +26,10 @@ function writeToHtml() {
 }
 writeToHtml();
 
+function round(value) {
+    return Math.floor(value * 100) / 100;
+}
+
 // create a function and give the argument event
 function submitAddTransaction(event) {
   // prevent form from creating HTTP request
@@ -27,7 +37,7 @@ function submitAddTransaction(event) {
 
   // extract user input from user elements
   const amount = Number(elAmount.value);
-  const amountRounded = Math.floor(amount * 100) / 100;
+  const amountRounded = round(amount);
   const description = elDescription.value;
 
   // create html that represents transaction and add it to the transaction list
@@ -46,12 +56,13 @@ function submitAddTransaction(event) {
 
   // update state
   if (amountRounded >= 0) {
-    totalIncome += amountRounded;
+    totalIncome = round(totalIncome + amountRounded);
   } else {
-    totalExpenses += amountRounded;
+    totalExpenses = round(totalExpenses + amountRounded);
   }
-  balance = totalIncome + totalExpenses;
-
+  balance = round(totalIncome + totalExpenses);
+  console.log({balance, totalIncome, totalExpenses}); 
+  
   // write state to html
   writeToHtml();
 }
